@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "TaskController",
+    "Method": "GetTasks",
+    "RelativePath": "api/v1/tasks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskController",
+    "Method": "AddTask",
+    "RelativePath": "api/v1/tasks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newTask",
+        "Type": "task_management_application.Models.TaskItem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskController",
+    "Method": "MarkTaskCompleted",
+    "RelativePath": "api/v1/tasks/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
