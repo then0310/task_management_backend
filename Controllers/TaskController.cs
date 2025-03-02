@@ -20,6 +20,7 @@ public class TaskController : ControllerBase
     public IActionResult AddTask([FromBody] TaskItem newTask)
     {
         newTask.Id = Guid.NewGuid();
+        newTask.CreatedAt = DateTime.UtcNow;
         tasks.Add(newTask);
         return CreatedAtAction(nameof(GetTasks), new { id = newTask.Id }, newTask);
     }

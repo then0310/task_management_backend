@@ -1,0 +1,14 @@
+C:\Projects\task_management_backend\out\task_management_backend.exe
+C:\Projects\task_management_backend\out\appsettings.Development.json
+C:\Projects\task_management_backend\out\appsettings.json
+C:\Projects\task_management_backend\out\task_management_backend.dll
+C:\Projects\task_management_backend\out\task_management_backend.deps.json
+C:\Projects\task_management_backend\out\task_management_backend.runtimeconfig.json
+C:\Projects\task_management_backend\out\task_management_backend.pdb
+C:\Projects\task_management_backend\out\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Projects\task_management_backend\out\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Projects\task_management_backend\out\Microsoft.Extensions.Options.dll
+C:\Projects\task_management_backend\out\Microsoft.OpenApi.dll
+C:\Projects\task_management_backend\out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Projects\task_management_backend\out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Projects\task_management_backend\out\Swashbuckle.AspNetCore.SwaggerUI.dll

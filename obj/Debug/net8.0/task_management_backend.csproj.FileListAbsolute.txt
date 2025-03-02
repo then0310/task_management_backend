@@ -33,3 +33,9 @@ C:\Projects\task_management_backend\obj\Debug\net8.0\refint\task_management_back
 C:\Projects\task_management_backend\obj\Debug\net8.0\task_management_backend.pdb
 C:\Projects\task_management_backend\obj\Debug\net8.0\task_management_backend.genruntimeconfig.cache
 C:\Projects\task_management_backend\obj\Debug\net8.0\ref\task_management_backend.dll
+C:\Projects\task_management_backend\bin\Debug\net8.0\out\web.config
+C:\Projects\task_management_backend\bin\Debug\net8.0\out\appsettings.Development.json
+C:\Projects\task_management_backend\bin\Debug\net8.0\out\appsettings.json
+C:\Projects\task_management_backend\bin\Debug\net8.0\out\task_management_backend.deps.json
+C:\Projects\task_management_backend\bin\Debug\net8.0\out\task_management_backend.runtimeconfig.json
+C:\Projects\task_management_backend\obj\Debug\net8.0\task_management_backend.sourcelink.json

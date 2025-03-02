@@ -15,6 +15,9 @@ builder.Services.AddCors(options =>
               .WithHeaders("Content-Type")); // Allow specific headers
 });
 
+// Add services to the container.
+builder.Services.AddHealthChecks();
+
 var app = builder.Build();
 
 // Use CORS in the middleware
@@ -32,5 +35,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapHealthChecks("/health");
 
 app.Run();
