@@ -47,7 +47,7 @@ Ensure you have the following installed on your machine:
 3. Check if the AWS credentials are configured correctly by opening the file. For Windows, it will be in C:\Users\USERNAME\.aws\credentials. For macOS and Linux, it should be in ~/.aws/credentials. (Optional)
 
 4. Then run below command to assume role for AWS, use the related information in parameters: 
-   aws sts assume-role --role-arn arn:aws:iam::<AWS Account ID>:role/<AWS IAM Role> --role-session-name "<Session Name>" --region <AWS region>
+   aws sts assume-role --role-arn arn:aws:iam::`AWS Account ID`:role/`AWS IAM Role` --role-session-name "`Session Name`" --region `AWS region`
 
 5. Copy the variables of AccessKeyId, SecretAccessKey, and SessionToken from current session, then set in current environment variable as 
    SET AWS_ACCESS_KEY_ID= xxx
@@ -55,18 +55,18 @@ Ensure you have the following installed on your machine:
    SET AWS_SESSION_TOKEN= xxx 
 
 6. In the terminal, go to the directory containing the repository you wish to deploy, and checkout the branch you wish to use. Run docker command as below with space and dot
-   docker build -t <Docker Repository Name>:<tag> .
+   docker build -t `Docker Repository Name`:`tag` .
 
 7. Once it is done, check if your docker image exists by running `docker images`. Note the IMAGE ID
 
 8. Need to create Private repositories in AWS ECR for first time
 
 9. Tag the docker image so that it can be pushed to ECR by running
-   docker tag <IMAGE ID> <AWS ECR URI>:latest
+   docker tag `IMAGE ID` `AWS ECR URI`:latest
 
 10. Push to ECR by running below 2 commands
-   aws ecr get-login-password --region <AWS region> | docker login --username AWS --password-stdin <AWS ECR URI>
-   docker push <AWS ECR URI>:latest
+   aws ecr get-login-password --region `AWS region` | docker login --username AWS --password-stdin `AWS ECR URI`
+   docker push `AWS ECR URI`:latest
 
 11. Log in to AWS Console and open Elastic Container Registry (ECR)
 
