@@ -22,7 +22,7 @@ Ensure you have the following installed on your machine:
 ---
 
 ### 2️ **Setting Up the Backend**
-1. Clone the repository:<br>  
+1. Clone the repository:<br>
    git clone https://github.com/then0310/task_management_backend.git
 
 2. Open the project:<br>

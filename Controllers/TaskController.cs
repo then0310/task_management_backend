@@ -1,38 +1,39 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using task_management_application.Models;
+using task_management_application.Services;
 
 [ApiController]
 [Route("api/v1/tasks")]
 public class TaskController : ControllerBase
 {
-    private static readonly List<ITaskItem> tasks = new();
+    private readonly ITaskService _taskService;
+
+    public TaskController(ITaskService taskService)
+    {
+        _taskService = taskService;
+    }
 
     [HttpGet]
     public IActionResult GetTasks()
     {
-        return Ok(tasks);
+        return Ok(_taskService.GetTasks());
     }
 
     [HttpPost]
     public IActionResult AddTask([FromBody] TaskItem newTask)
     {
-        newTask.Id = Guid.NewGuid();
-        newTask.CreatedAt = DateTime.UtcNow;
-        tasks.Add(newTask);
-        return CreatedAtAction(nameof(GetTasks), new { id = newTask.Id }, newTask);
+        var createdTask = _taskService.AddTask(newTask);
+        return CreatedAtAction(nameof(GetTasks), new { id = createdTask.Id }, createdTask);
     }
 
     [HttpPut("{id}")]
     public IActionResult MarkTaskCompleted(Guid id)
     {
-        var task = tasks.FirstOrDefault(t => t.Id == id);
-        if (task == null)
+        var updatedTask = _taskService.MarkTaskCompleted(id);
+        if (updatedTask == null)
             return NotFound();
 
-        task.IsCompleted = true;
-        return Ok(task);
+        return Ok(updatedTask);
     }
 }
